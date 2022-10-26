@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Livewire\Hapus;
+use App\Http\Livewire\Tambah;
 use App\Http\Livewire\Customer;
 use Illuminate\Support\Facades\Route;
 
@@ -19,3 +21,5 @@ Route::get('/', function () {
 });
 
 Route::get('/customer', Customer::class);
+Route::get('/tambah', Tambah::class)->name('tambah');
+Route::delete('/hapus', Hapus::class)->name('hapus');
